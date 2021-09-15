@@ -38,6 +38,8 @@ namespace ProductApps
                 totalChargeTextBlock.Text = Convert.ToString(cProduct.TotalPayment + 25);
                 //modify by shan wang to add wrap charge calculation
                 wrapChargeTextBlock.Text = Convert.ToString(cProduct.TotalPayment + 25 + 5);
+                //modify by shan wang to calculate out total charge after GST
+                totalChargeAfterGSTTextBlock.Text = Convert.ToString((cProduct.TotalPayment + 25 + 5) * 1.1M);
             }
             catch (FormatException)
             {
